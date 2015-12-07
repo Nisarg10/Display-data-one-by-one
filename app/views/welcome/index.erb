@@ -1,4 +1,44 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    $("#button").click(function (){
+
+          $.ajax({
+            url: "mongodb://<nsd6275>:<nsd6275>@ds059654.mongolab.com:59654/heroku_vknx18tr",
+            dataType: "text",
+            success: function(data) {
+
+              var json = $.parseJSON(data);
+
+              for(var i=0; i < json.length; i++){
+                json[i].id;
+                json[i].ethnicity;
+                json[i].sex;
+                json[i].causeOfDeath;
+                json[i].year;
+              }
+
+
+
+            }
+
+
+
+          });
+
+
+
+    });
+
+
+})
+</script>
+
+
+
+
+
 <div class="container">
-      <img src="<%= asset_path('lang-logo.png') %>">
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/ruby-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+    <a type="button" id="button" class="btn btn-lg btn-primary" ><span class="glyphicon glyphicon-download"></span> GET DATA</a>
   </div>
