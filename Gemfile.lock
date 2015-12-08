@@ -141,6 +141,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  mongo (~2.1)
   pg
   puma
   rails (= 4.2.3)
