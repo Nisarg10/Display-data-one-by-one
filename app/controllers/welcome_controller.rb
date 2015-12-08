@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-	respond_to :js, :json, :html
+	
   # GET /welcome
   def abc
 
