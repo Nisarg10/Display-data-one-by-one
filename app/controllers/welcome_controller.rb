@@ -1,10 +1,11 @@
 class WelcomeController < ApplicationController
-	
-  # GET /welcome
-  def abc
 
   	require "mongo"
 	include Mongo
+		
+  # GET /welcome
+  def abc
+
 
   	id = params[:id]
 
