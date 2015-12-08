@@ -15,7 +15,7 @@ $(document).ready(function(){
 
              setTimeout(function (){
               for (var i = 0; i < json.length; i++) {
-                tr = $('tr/');
+                tr = $('<tr/>');
                 tr.append("<td>" + json[i].id + "</td>");
                 tr.append("<td>" + json[i].ethnicity + "</td>");
                 tr.append("<td>" + json[i].sex + "</td>");
