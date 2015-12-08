@@ -1,9 +1,11 @@
-require 'mongo'
-require 'json'
+
 class WelcomeController < ApplicationController
   	
   # GET /welcome
   def abc
+
+    require 'mongo'
+    require 'json'
 
   	id = params[:id]
 
