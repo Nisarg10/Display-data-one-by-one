@@ -1,4 +1,4 @@
-
+require 'Mongo'
 
 class WelcomeController < ApplicationController
   	
