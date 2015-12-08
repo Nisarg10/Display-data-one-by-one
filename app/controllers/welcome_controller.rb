@@ -1,5 +1,4 @@
 require "mongo"
-include Mongo
 
 class WelcomeController < ApplicationController
   	
