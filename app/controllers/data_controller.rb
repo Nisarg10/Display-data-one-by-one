@@ -14,4 +14,3 @@ class DataController < ApplicationController
 
 	render json: @db
 end
-end
