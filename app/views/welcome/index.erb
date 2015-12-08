@@ -16,15 +16,15 @@ $(document).ready(function(){
 
     $.ajax({
             type: 'GET',
-            dataType: "text",
-            crossDomain: true,
-            url: "https://api.mongolab.com/api/1/databases/heroku_vknx18tr/collections/DeathCause/?apiKey=MKIdTGj5QSAvCc2S25oLjRDHuUXDOgEz?id = "+ i +"",
+            dataType: "json",
+            data: {id:i }
+            url: "controllers/welcome_controller.rb",
             success: function(data) {
 
               var json = $.parseJSON(data);
               var tr;
              
-             for (var i = 0; i < json.length; i++) {
+             
                 tr = $('<tr/>');
                 tr.append("<td>" + json[i].id + "</td>");
                 tr.append("<td>" + json[i].ethnicity + "</td>");
@@ -32,8 +32,6 @@ $(document).ready(function(){
                 tr.append("<td>" + json[i].causeOfDeath + "</td>");
                 tr.append("<td>" + json[i].year + "</td>");
                 $('table').append(tr);
-
-              }
         }
     });
 }
