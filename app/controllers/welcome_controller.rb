@@ -4,11 +4,9 @@ class WelcomeController < ApplicationController
   	
   # GET /welcome
   def abc
-  	require 'mongo'
-  	require 'rubygems'
-  	require 'cgi'
+  	require "mongo"
   	include Mongo
-  	
+
   	id = params[:id]
 
 
