@@ -1,13 +1,14 @@
-require 'Mongo'
+
 
 class WelcomeController < ApplicationController
   	
   # GET /welcome
   def abc
-  	
+  	require 'mongo'
   	require 'rubygems'
   	require 'cgi'
-
+  	include Mongo
+  	
   	id = params[:id]
 
 
