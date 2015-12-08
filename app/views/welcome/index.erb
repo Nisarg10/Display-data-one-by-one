@@ -10,8 +10,20 @@ $(document).ready(function(){
             url: "https://api.mongolab.com/api/1/databases/heroku_vknx18tr/collections/DeathCause?apiKey=MKIdTGj5QSAvCc2S25oLjRDHuUXDOgEz",
             success: function(data) {
 
-              console.log(data);
-                           
+              var json = $.parseJSON(data);
+              var tr;
+
+             setTimeout(function (){
+              for (var i = 0; i < json.length; i++) {
+                tr = $('tr/');
+                tr.append("<td>" + json[i].id + "</td>");
+                tr.append("<td>" + json[i].ethnicity + "</td>");
+                tr.append("<td>" + json[i].sex + "</td>");
+                tr.append("<td>" + json[i].causeOfDeath + "</td>");
+                tr.append("<td>" + json[i].year + "</td>");
+                $('table').append(tr);
+              }
+                   }, 500);       
 
 
 
@@ -35,4 +47,9 @@ $(document).ready(function(){
 
 <div class="container">
     <a type="button" id="button" class="btn btn-lg btn-primary" ><span class="glyphicon glyphicon-download"></span> GET DATA</a>
+    <table border=1><tr><th>id</th>
+                        <th>ethnicity</th>
+                        <th>sex</th>
+                        <th>Cause Of Death</th>
+                        <th>Year</th></tr></table>
   </div>
