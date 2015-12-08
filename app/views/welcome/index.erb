@@ -4,45 +4,39 @@ $(document).ready(function(){
 
     $("#button").click(function (){
 
-          $.ajax({
+          for(var i=1;i < 101; i++){
+
+            setTimeout(myFunction(i),500)
+          }
+  });
+})
+</script>
+<script>
+  function myFunction(i){
+
+    $.ajax({
             type: 'GET',
             dataType: "text",
-            url: "https://api.mongolab.com/api/1/databases/heroku_vknx18tr/collections/DeathCause?apiKey=MKIdTGj5QSAvCc2S25oLjRDHuUXDOgEz",
+            url: "https://api.mongolab.com/api/1/databases/heroku_vknx18tr/collections/DeathCause/"+ i +"?apiKey=MKIdTGj5QSAvCc2S25oLjRDHuUXDOgEz",
             success: function(data) {
 
               var json = $.parseJSON(data);
               var tr;
-
              
-              for (var i = 0; i < json.length; i++) {
-               setTimeout(function (){ 
+             for (var i = 0; i < json.length; i++) {
                 tr = $('<tr/>');
-                tr.append("<td>" + i + "</td>");
+                tr.append("<td>" + json[i].id + "</td>");
                 tr.append("<td>" + json[i].ethnicity + "</td>");
                 tr.append("<td>" + json[i].sex + "</td>");
                 tr.append("<td>" + json[i].causeOfDeath + "</td>");
                 tr.append("<td>" + json[i].year + "</td>");
                 $('table').append(tr);
-                }, 5000);
+
               }
-                          
-
-
-
-            }
-
-
-
-          });
-
-
-
+        }
     });
-
-
-})
+}
 </script>
-
 
 
 
