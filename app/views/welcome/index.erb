@@ -17,7 +17,7 @@ $(document).ready(function(){
     $.ajax({
             type: 'GET',
             dataType: "text",
-            url: "https://api.mongolab.com/api/1/databases/heroku_vknx18tr/collections/DeathCause/id = "+ i +"?apiKey=MKIdTGj5QSAvCc2S25oLjRDHuUXDOgEz",
+            url: "https://api.mongolab.com/api/1/databases/heroku_vknx18tr/collections/DeathCause/id = "+ i +"/?apiKey=MKIdTGj5QSAvCc2S25oLjRDHuUXDOgEz",
             success: function(data) {
 
               var json = $.parseJSON(data);
