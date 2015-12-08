@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   root 'welcome#index'
-  get 'welcome/abc'
+  #get 'welcome/abc'
   #get 'fetchController/abc/:id' => 'fetchController#abc'
+  get 'data/fetch/:x' => 'data#fetch'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
