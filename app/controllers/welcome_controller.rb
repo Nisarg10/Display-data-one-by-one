@@ -1,8 +1,5 @@
 class WelcomeController < ApplicationController
 
-  	require "mongo"
-	include Mongo
-		
   # GET /welcome
   def abc
 
