@@ -13,12 +13,7 @@ $(document).ready(function(){
 
   function myFunction(i){
 
-    $.ajax({
-            url: "welcome/abc",
-            data: {id: i.toString() },
-            type: 'GET',
-            dataType: "text",
-            success: function(data) {
+    $.get("welcome/abc"+ i.toString(), function(data) {
 
              
               var tr;
@@ -31,7 +26,7 @@ $(document).ready(function(){
                 tr.append("<td>" + data.causeOfDeath + "</td>");
                 tr.append("<td>" + data.year + "</td>");
                 $('table').append(tr);
-        }
+        
     });
 }
 </script>

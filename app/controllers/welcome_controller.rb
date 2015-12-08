@@ -15,6 +15,6 @@ end
 	
   render json: @data
 
- 
+ end
 
 end
