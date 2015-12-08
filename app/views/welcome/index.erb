@@ -14,10 +14,10 @@ $(document).ready(function(){
   function myFunction(i){
 
     $.ajax({
-            type: 'GET',
-            dataType: "json",
+            url: "welcome/abc",
             data: {id:i },
-            url: "welcome/abc"
+            type: 'GET',
+            dataType: "text"
             success: function(data) {
 
               var json = $.parseJSON(data);
