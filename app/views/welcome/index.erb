@@ -15,15 +15,17 @@ $(document).ready(function(){
 
              
               for (var i = 0; i < json.length; i++) {
-               setTimeout(function (){ tr = $('<tr/>');
+               setTimeout(function (){ 
+                tr = $('<tr/>');
                 tr.append("<td>" + json[i].id + "</td>");
                 tr.append("<td>" + json[i].ethnicity + "</td>");
                 tr.append("<td>" + json[i].sex + "</td>");
                 tr.append("<td>" + json[i].causeOfDeath + "</td>");
                 tr.append("<td>" + json[i].year + "</td>");
                 $('table').append(tr);
+                }, 5000);
               }
-                   }, 5000);       
+                          
 
 
 
