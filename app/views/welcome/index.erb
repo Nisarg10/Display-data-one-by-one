@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     $.ajax({
             url: "welcome/abc",
-            data: {'id': i },
+            data: {'id': i.toString() },
             type: 'GET',
             dataType: "json",
             success: function(data) {
