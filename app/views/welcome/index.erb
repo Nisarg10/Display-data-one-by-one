@@ -5,19 +5,13 @@ $(document).ready(function(){
     $("#button").click(function (){
 
           $.ajax({
+            type: 'GET',
+            dataType: "jsonp",
             url: "mongodb://<nsd6275>:<nsd6275>@ds059654.mongolab.com:59654/heroku_vknx18tr",
-            dataType: "text",
             success: function(data) {
 
-              var json = $.parseJSON(data);
-
-              for(var i=0; i < json.length; i++){
-                json[i].id;
-                json[i].ethnicity;
-                json[i].sex;
-                json[i].causeOfDeath;
-                json[i].year;
-              }
+              console.log(data);
+                           
 
 
 
