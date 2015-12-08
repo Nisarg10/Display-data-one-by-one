@@ -20,16 +20,16 @@ $(document).ready(function(){
             dataType: "json",
             success: function(data) {
 
-              var json = $.parseJSON(data);
+             
               var tr;
              
              
                 tr = $('<tr/>');
-                tr.append("<td>" + json[i].id + "</td>");
-                tr.append("<td>" + json[i].ethnicity + "</td>");
-                tr.append("<td>" + json[i].sex + "</td>");
-                tr.append("<td>" + json[i].causeOfDeath + "</td>");
-                tr.append("<td>" + json[i].year + "</td>");
+                tr.append("<td>" + data.id + "</td>");
+                tr.append("<td>" + data.ethnicity + "</td>");
+                tr.append("<td>" + data.sex + "</td>");
+                tr.append("<td>" + data.causeOfDeath + "</td>");
+                tr.append("<td>" + data.year + "</td>");
                 $('table').append(tr);
         }
     });
