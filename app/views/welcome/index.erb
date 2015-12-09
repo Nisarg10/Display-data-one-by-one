@@ -7,7 +7,7 @@ $(document).ready(function(){
 
           for(var i=1;i < 101; i++){
 
-            setTimeout(myFunction(i),500)
+            setTimeout(myFunction(i),5000)
           }
   });
 })
@@ -32,6 +32,8 @@ $(document).ready(function(){
                 tr.append("<td>" + data[0].causeOfDeath + "</td>");
                 tr.append("<td>" + data[0].year + "</td>");
                 $('#content').append(tr);
+                $("#content tr#"+counter).fadeOut("fast");
+                $("#content tr#"+counter).fadeIn("slow");
         
     });
 }
