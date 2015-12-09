@@ -28,7 +28,7 @@ $(document).ready(function(){
                 
                 if(i>20 && i%20===1)
                 {
-                $("#content tr").detach();
+                $("#content > tr").detach();
                 }
               });
               
@@ -43,10 +43,10 @@ $(document).ready(function(){
 
 <div class="container">
     <a type="button" id="button" class="btn btn-lg btn-primary" ><span class="glyphicon glyphicon-download"></span> GET DATA</a>
-    <table border=1><tr><th>id</th>
+    <table id="content" border=1><tr><th>id</th>
                         <th>ethnicity</th>
                         <th>sex</th>
                         <th>Cause Of Death</th>
                         <th>Year</th></tr></table>
-    <div id="content"></div>
+    
   </div>
