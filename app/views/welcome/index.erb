@@ -16,7 +16,7 @@ $(document).ready(function(){
 
     if(i%20===0)
           {
-            $("#content").html("");
+            $("#content > tr").detach();
           }
 
 
@@ -32,8 +32,8 @@ $(document).ready(function(){
                 tr.append("<td>" + data[0].causeOfDeath + "</td>");
                 tr.append("<td>" + data[0].year + "</td>");
                 $('#content').append(tr);
-                $("#content tr#").fadeOut("fast");
-                $("#content tr#").fadeIn("slow");
+                $("#content > tr").fadeOut("fast");
+                $("#content > tr").fadeIn("slow");
         
     });
 }
