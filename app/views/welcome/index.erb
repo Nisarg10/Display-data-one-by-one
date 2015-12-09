@@ -4,10 +4,10 @@ $(document).ready(function(){
 
     $("#button").click(function (){
 
-            
+            var i =1;
             var a = setTimeout(function(){
 
-             for (var i=1; i< 101; i++) {
+             
 
               if(i%20===0)
               {
@@ -25,10 +25,10 @@ $(document).ready(function(){
                 tr.append("<td>" + data[0].causeOfDeath + "</td>");
                 tr.append("<td>" + data[0].year + "</td>");
                 $('#content').append(tr);
-        
+                 
                
-              }); 
-            }
+              });
+              i = i+1; 
               },5000);  
           
   });
