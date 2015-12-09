@@ -26,7 +26,7 @@ $(document).ready(function(){
                 tr.append("<td>" + data[0].sex + "</td>");
                 tr.append("<td>" + data[0].causeOfDeath + "</td>");
                 tr.append("<td>" + data[0].year + "</td>");
-                $('#content').slideDown('slow').append(tr);
+                $('#content').slideUp('slow',$('#content').append(tr));
                 i = i+1;  
                
               });
@@ -46,6 +46,6 @@ $(document).ready(function(){
                         <th>ethnicity</th>
                         <th>sex</th>
                         <th>Cause Of Death</th>
-                        <th>Year</th></tr></table>
-    <div id="content"></div>
+                        <th>Year</th></tr>
+    <div id="content"></div></table>
   </div>
