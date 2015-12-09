@@ -9,13 +9,11 @@ $(document).ready(function(){
 
              
 
-              if(i%20===0)
+              if(i%20==0)
               {
                 $("#content > tr").detach();
               }
-              if(i==100){
-                clearInterval(a);
-              }
+              
 
               $.get("data/fetch/"+ i.toString(), function(data) {
 
@@ -26,9 +24,11 @@ $(document).ready(function(){
                 tr.append("<td>" + data[0].sex + "</td>");
                 tr.append("<td>" + data[0].causeOfDeath + "</td>");
                 tr.append("<td>" + data[0].year + "</td>");
-                $('#content').slideUp('slow',$('#content').append(tr));
+                $('#content').append(tr).fadeIn('slow');
                 i = i+1;  
-               
+                if(i==100){
+                clearInterval(a);
+                }
               });
               
               },500);  
@@ -46,6 +46,6 @@ $(document).ready(function(){
                         <th>ethnicity</th>
                         <th>sex</th>
                         <th>Cause Of Death</th>
-                        <th>Year</th></tr>
-    <div id="content"></div></table>
+                        <th>Year</th></tr></table>
+    <div id="content"></div>
   </div>
