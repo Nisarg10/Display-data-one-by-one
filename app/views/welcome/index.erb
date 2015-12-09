@@ -14,12 +14,17 @@ $(document).ready(function(){
 
   function myFunction(i){
 
+    if(i%20===0)
+          {
+            $("#insurance").html("");
+          }
+
+
     $.get("data/fetch/"+ i.toString(), function(data) {
 
              
-              var tr;
-             
-             
+
+                var tr;
                 tr = $('<tr/>');
                 tr.append("<td>" + data[0].id + "</td>");
                 tr.append("<td>" + data[0].ethnicity + "</td>");
