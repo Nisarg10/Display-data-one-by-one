@@ -4,8 +4,10 @@ $(document).ready(function(){
 
     $("#button").click(function (){
 
-            var i = 1;
+            
             var a = setTimeout(function(){
+
+             for (var i=1; i< 101; 1++) {
 
               if(i%20===0)
               {
@@ -14,8 +16,6 @@ $(document).ready(function(){
 
 
               $.get("data/fetch/"+ i.toString(), function(data) {
-
-             
 
                 var tr;
                 tr = $('<tr/>');
@@ -28,8 +28,10 @@ $(document).ready(function(){
                 $("#content > tr").fadeOut("fast");
                 $("#content > tr").fadeIn("slow");
         
-                i += 1;
-    });  },5000);  
+               
+              }); 
+            }
+              },5000);  
           
   });
 })
