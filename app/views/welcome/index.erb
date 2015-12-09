@@ -25,7 +25,7 @@ $(document).ready(function(){
                 tr.append("<td>" + data[0].sex + "</td>");
                 tr.append("<td>" + data[0].causeOfDeath + "</td>");
                 tr.append("<td>" + data[0].year + "</td>");
-                $('table').append(tr);
+                $('content').append(tr);
         
     });
 }
@@ -41,4 +41,5 @@ $(document).ready(function(){
                         <th>sex</th>
                         <th>Cause Of Death</th>
                         <th>Year</th></tr></table>
+    <div id='content'></div>
   </div>
