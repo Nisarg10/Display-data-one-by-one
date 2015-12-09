@@ -31,7 +31,8 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma'
-gem 'mongo'
+gem 'mongo', '~> 2.2.0'
+gem 'json', '~> 1.8.3' 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
