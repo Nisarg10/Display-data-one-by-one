@@ -11,8 +11,8 @@ class DataController < ApplicationController
 		data = connection.database
 		data1 = data.collection('DeathCause')
 		@db = data1.find({:id => params[:x]});
-	
+		render json: @db
 	end
 
-	render json: @db
+	
 end
