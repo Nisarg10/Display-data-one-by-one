@@ -4,23 +4,16 @@ $(document).ready(function(){
 
     $("#button").click(function (){
 
+            var i = 1;
+            var a = setTimeout(function(){
 
-          for(var i=1;i < 101; i++){
-
-            setTimeout(myFunction(i),5000)
-          }
-  });
-})
-
-  function myFunction(i){
-
-    if(i%20===0)
-          {
-            $("#content > tr").detach();
-          }
+              if(i%20===0)
+              {
+                $("#content > tr").detach();
+              }
 
 
-    $.get("data/fetch/"+ i.toString(), function(data) {
+              $.get("data/fetch/"+ i.toString(), function(data) {
 
              
 
@@ -35,8 +28,10 @@ $(document).ready(function(){
                 $("#content > tr").fadeOut("fast");
                 $("#content > tr").fadeIn("slow");
         
-    });
-}
+    });  },5000);
+          }
+  });
+})
 </script>
 
 
