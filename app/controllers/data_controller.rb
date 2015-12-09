@@ -14,5 +14,5 @@ class DataController < ApplicationController
 	
 	end
 
-	render :json => @db
+	render json: @db
 end
