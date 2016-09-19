@@ -1,3 +1,6 @@
+In this application, using Ruby language and mongoDB, data was fetched one by one and displayed on web page. One web page only 20 records are shown and it is replaced by the other data without refreshing the webpage.
+
+
 ○ What aspect of the implementation did you find easy, if any, and why?
 
     The easiest part was jquery because i didnot have to change much code from project 1.
